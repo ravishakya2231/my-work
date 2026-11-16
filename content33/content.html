@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content-33\</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 970px;
+            margin: 0 auto;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 16px;
+        }
+
+        h1 {
+            color: #1E0E62;
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 52px;
+            letter-spacing: -0.4px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            min-width: 850px;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        
+        th:first-child,
+        td:first-child {
+            width: 18%;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 42%;
+        }
+
+        th:nth-child(3),
+        td:nth-child(3) {
+            width: 20%;
+        }
+
+        th:nth-child(4),
+        td:nth-child(4) {
+            width: 20%;
+        }
+
+        
+        th {
+            color: #A1A1B0;
+            height: 41px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 26px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 10px;
+            white-space: nowrap;
+        }
+
+            td {
+            color: #1E0E62;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0;
+            text-align: center;
+            padding: 22px 12px;
+            white-space: nowrap;
+        }
+
+        
+        .line-2 {
+            color: #9B9BAA;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            white-space: nowrap;
+        }
+
+        
+
+         tbody tr:nth-child(odd) {
+            background-color: #F5F5F6;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #FFFFFF;
+        }
+
+        
+        tbody td:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+
+        tbody td:last-child {
+            border-radius: 0 5px 5px 0;
+        } 
+
+        
+
+        @media (max-width: 992px) {
+
+            h1 {
+                font-size: 36px;
+                margin-bottom: 30px;
+            }
+
+            table {
+                min-width: 850px;
+            }
+
+        }
+
+        
+
+       
+    </style>
+   
+</head>
+
+<body>
+
+ 
+    <section>
+
+        <div class="container">
+
+            <h1>What's Inside?</h1>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Features</th>
+                            <th></th>
+                            <th>Free</th>
+                            <th>Pro</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Add Files</td>
+                            <td class="line-2">Add anything from photos to spreadsheets</td>
+                            <td>5 Mb per File</td>
+                            <td>Unlimited</td>
+                        </tr>
+
+                        <tr>
+                            <td>Assign To-dos</td>
+                            <td class="line-2">Delegate responsibilities like a boss</td>
+                            <td>25 Assigns per List</td>
+                            <td>Unlimited</td>
+                        </tr>
+
+                        <tr>
+                            <td>Subtasks</td>
+                            <td class="line-2">Break down large goals into actionable to-dos</td>
+                            <td>25 per To-do</td>
+                            <td>Unlimited</td>
+                        </tr>
+
+                        <tr>
+                            <td>Backgrounds</td>
+                            <td class="line-2">Personalize your Wunderlist just the way you like</td>
+                            <td>20 Backgrounds</td>
+                            <td>30 Backgrounds</td>
+                        </tr>
+
+                        <tr>
+                            <td>Team</td>
+                            <td class="line-2">Make best team in the world</td>
+                            <td>10 Members</td>
+                            <td>Unlimited</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

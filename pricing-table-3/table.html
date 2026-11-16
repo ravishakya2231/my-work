@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            color: #1E0E62;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #1E0E62;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 700;
+            font-size: 42px;
+            line-height: 52px;
+            letter-spacing: -0.4px;
+        }
+
+        /* Responsive Table */
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            min-width: 1044px;
+            table-layout: fixed;
+            border: 2px solid #EBEAED;
+            border-radius: 10px;
+            color: #1E0E62;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        th,
+        td {
+            width: 25%;
+            border: 2px solid #EBEAED;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            height: 140px;
+            background-color: #F4F4F6;
+            padding: 10px;
+        }
+
+        th:nth-child(1) {
+            border-top-left-radius: 10px;
+        }
+
+        th:nth-child(4) {
+            border-top-right-radius: 10px;
+        }
+
+        td {
+            height: 60px;
+        }
+
+        .un {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        .row-1 {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 26px;
+            letter-spacing: 2px;
+            text-align: right;
+            text-transform: uppercase;
+            color: #312e9b66;
+            padding-right: 20px;
+        }
+
+        .span {
+            vertical-align: top;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+        }
+
+        .number,
+        .number-2,
+        .number-3 {
+            font-weight: 700;
+            font-size: 58px;
+            line-height: 70px;
+            color: #1E0E62;
+        }
+
+        .number {
+            margin-left: 12px;
+        }
+
+        .number-2 {
+            letter-spacing: -1px;
+            margin-left: 2px;
+        }
+
+        .number-3 {
+            letter-spacing: -1px;
+            margin-left: 9px;
+        }
+
+        .head {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            color: #1E0E62;
+            margin-bottom: 7px;
+        }
+
+        .head-2 {
+            color: #1E0E62;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+        }
+
+        .price-2 {
+            height: 152px;
+        }
+
+        .button {
+            height: 129px;
+        }
+
+        button {
+            color: #1E0E62;
+            border-radius: 100px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            width: 100%;
+            max-width: 230px;
+            min-height: 50px;
+            padding: 8px 12px;
+            border: 2px solid #EBEAED;
+            background-color: white;
+            cursor: pointer;
+            transition: all 400ms ease-out;
+        }
+
+        button:hover {
+            background-color: #25DAC5;
+            color: #ffffff;
+        }
+
+        .bg {
+            background-color: #25DAC5;
+            color: #ffffff;
+        }
+
+        .bg:hover {
+            background-color: #ffffff;
+            color: #1E0E62;
+        }
+
+  
+
+        @media (max-width: 992px) {
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 36px;
+                line-height: 44px;
+            }
+
+            table {
+                min-width: 920px;
+            }
+
+            th {
+                height: 125px;
+            }
+
+            td {
+                height: 55px;
+            }
+
+            .head {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .head-2 {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            .number,
+            .number-2,
+            .number-3 {
+                font-size: 48px;
+                line-height: 60px;
+            }
+
+            .row-1 {
+                font-size: 12px;
+                letter-spacing: 1px;
+                padding-right: 12px;
+            }
+
+            .un {
+                font-size: 14px;
+            }
+
+            button {
+                max-width: 190px;
+                min-height: 45px;
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+
+      
+
+        @media (max-width: 576px) {
+
+            section {
+                min-height: auto;
+                padding: 40px 15px;
+            }
+
+            h1 {
+                font-size: 25px;
+                line-height: 34px;
+                margin-bottom: 20px;
+            }
+
+            table {
+                min-width: 800px;
+            }
+
+            th {
+                height: 110px;
+                padding: 7px;
+            }
+
+            td {
+                height: 50px;
+                padding: 6px;
+            }
+
+            .head {
+                font-size: 14px;
+                line-height: 21px;
+                margin-bottom: 5px;
+            }
+
+            .head-2 {
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            .number,
+            .number-2,
+            .number-3 {
+                font-size: 38px;
+                line-height: 50px;
+            }
+
+            .span {
+                font-size: 13px;
+                line-height: 20px;
+            }
+
+            .row-1 {
+                font-size: 10px;
+                line-height: 18px;
+                letter-spacing: 0.5px;
+                padding: 6px;
+            }
+
+            .un {
+                font-size: 13px;
+                line-height: 20px;
+            }
+
+            .price-2 {
+                height: 120px;
+            }
+
+            .button {
+                height: 100px;
+            }
+
+            button {
+                max-width: 170px;
+                min-height: 42px;
+                padding: 6px 8px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+
+        <div class="container">
+
+            <h1>Do more with Startup Framework</h1>
+
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th></th>
+
+                            <th>
+                                <p class="head">Basic Plan</p>
+                                <p class="head-2">All the basic for starting a new business</p>
+                            </th>
+
+                            <th>
+                                <p class="head">Pro Plan</p>
+                                <p class="head-2">Everything you need for a growing business</p>
+                            </th>
+
+                            <th>
+                                <p class="head">Company Plan</p>
+                                <p class="head-2">Perfect for companies, agencies &amp; teams</p>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="price-2">
+
+                            <td class="row-1">Price</td>
+
+                            <td>
+                                <p>
+                                    <span class="span">$</span>
+                                    <span class="number">19</span>
+                                </p>
+                            </td>
+
+                            <td>
+                                <p>
+                                    <span class="span">$</span>
+                                    <span class="number-2">49</span>
+                                </p>
+                            </td>
+
+                            <td>
+                                <p>
+                                    <span class="span">$</span>
+                                    <span class="number-3">99</span>
+                                </p>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="row-1">Hosted Projects</td>
+                            <td class="un">Unlimited</td>
+                            <td class="un">Unlimited</td>
+                            <td class="un">Unlimited</td>
+                        </tr>
+
+                        <tr>
+                            <td class="row-1">UnHosted Projects</td>
+                            <td class="un">2</td>
+                            <td class="un">10</td>
+                            <td class="un">Unlimited</td>
+                        </tr>
+
+                        <tr>
+                            <td class="row-1">Billing</td>
+                            <td><img src="./box.png" width="20" height="20" alt="blank-box"></td>
+                            <td><img src="./right.png" width="20" height="20" alt="right"></td>
+                            <td><img src="./right.png" width="20" height="20" alt="right"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="row-1">Support</td>
+                            <td class="un">Forum</td>
+                            <td class="un">Chat</td>
+                            <td class="un">Phone Call</td>
+                        </tr>
+
+                        <tr>
+                            <td class="row-1">Custom Domen</td>
+                            <td><img src="./box.png" width="20" height="20" alt="blank-box"></td>
+                            <td><img src="./box.png" width="20" height="20" alt="blank-box"></td>
+                            <td><img src="./right.png" width="20" height="20" alt="right"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="row-1">Dashboard</td>
+                            <td><img src="./box.png" width="20" height="20" alt="blank-box"></td>
+                            <td><img src="./box.png" width="20" height="20" alt="blank-box"></td>
+                            <td><img src="./right.png" width="20" height="20" alt="right"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="row-1 button"></td>
+                            <td><button>Get Started for Free</button></td>
+                            <td><button class="bg">Get Started for Free</button></td>
+                            <td><button>Get Started for Free</button></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
+ 
